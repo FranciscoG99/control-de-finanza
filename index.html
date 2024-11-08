@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de Finanza</title>
+    <link rel="icon" href="grafica1.webp">
+    <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <section class="box_upper">
+          <h1>Control de Finanza</h1>
+
+          <div class="balance">
+            <h2 id="netAmount">$0</h2>
+            <div class="line"></div>
+            <h3>Balance Total</h3>
+          </div>
+        </section>
+
+        <div class="transaction_container">
+          <h3>Transacciones</h3>
+          <hr/>
+        
+          <div class="transactions">
+        
+          </div>
+        </div>
+        
+        <section class="transaction_form">
+          <h3>Agregar Transacciones</h3>
+          <form id="transactionForm">
+            <div class="inputs">
+              <div class="form_control">
+                <label for="text">Tipo</label>
+                <input
+                  placeholder="Ingresar Tipo"
+                  type="text"
+                  name="text"
+                  id="text"
+                />
+              </div>
+              <div class="form_control">
+                <label for="amount">Monto</label>
+                <input
+                  placeholder="Ingresar Monto"
+                  type="number"
+                  name="amount"
+                  id="amount"
+                />
+              </div>
+            </div>
+
+            <div class="buttons_container">
+              <button type="submit" id="earnBtn">
+                <p id="earning">$0</p>
+                <p class="button_letra">INGRESOS</p>
+              </button>
+              <button type="submit" id="expBtn">
+                <p id="expense">$0</p>
+                <p class="button_letra">GASTOS</p>
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
