@@ -32,7 +32,7 @@ const renderTransactions = () => {
           <div class="content" onclick="showEdit(${id})">
               <div class="left" >
               <p>${text}</p>
-              <p>${sign} $ ${amount}</p>
+              <p>${sign} $ ${Number(amount).toLocaleString('es-ES')}</p>
           </div>
               <div class="status ${isCredit ? "credit" : "debit"}">${isCredit ? "I" : "G"}</div>
           </div>
@@ -52,9 +52,9 @@ const renderTransactions = () => {
     transactionContainerEl.insertAdjacentHTML("afterbegin", transactionEl);
   });
 
-  netAmountEl.innerHTML = `$ ${net}`;
-  earningEl.innerHTML = `$ ${earning}`;
-  expenseEl.innerHTML = `$ ${expense}`;
+  netAmountEl.innerHTML = `$ ${net.toLocaleString('es-ES')}`;
+  earningEl.innerHTML = `$ ${earning.toLocaleString('es-ES')}`;
+  expenseEl.innerHTML = `$ ${expense.toLocaleString('es-ES')}`;
 
   // Guardar el estado actualizado en localStorage
   localStorage.setItem("transactions", JSON.stringify(state.transactions));
@@ -75,7 +75,7 @@ const addTransaction = (e) => {
   const transaction = {
     id: isUpdate ? tid : Math.floor(Math.random() * 1000),
     text: text,
-    amount: +amount,
+    amount: Number(amount),
     type: isEarn ? "credit" : "debit",
   };
 
