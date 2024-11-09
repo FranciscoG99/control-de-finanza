@@ -330,6 +330,8 @@ p {
 h1 {
   font-weight: 500;
   font-size: 32px;
+  color: var(--claro);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
 }
 
 h2 {
@@ -342,6 +344,11 @@ h3 {
   font-size: 20px;
   text-align: center;
   font-weight: 500;
+}
+
+.transaction_container h3 {
+  color: var(--claro);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
 }
 
 .box_upper,
@@ -357,9 +364,8 @@ h3 {
   padding: 5px;
   background-color: var(--claro);
   border-radius: 5px;
-
+  border: 1px solid black;
   box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.36);
-
 }
 
 .line {
@@ -410,6 +416,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
+  border: 1px solid black;
 }
 
 .content {
@@ -445,6 +452,7 @@ h3 {
   min-width: 40px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  border: 1px solid black;
 }
 
 .credit {
@@ -470,6 +478,7 @@ h3 {
   border-radius: 10px;
   margin-top: 7px;
   box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.36);
+  border: 1px solid black;
 }
 
 .transaction_form h3 {
@@ -534,6 +543,7 @@ form input:focus-visible {
   background-color: var(--green);
   margin-right: 2px;
   border-radius: 10px;
+  border: 1px solid black;
   box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.36);
 }
 
@@ -541,6 +551,7 @@ form input:focus-visible {
   background-color: var(--red);
   margin-left: 2px;
   border-radius: 10px;
+  border: 1px solid black;
   box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.36);
 }
 
